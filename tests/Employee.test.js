@@ -14,7 +14,7 @@ describe('Employee', () => {
     it('should return employee id number', ()=>{
       const obj2 = new Employee('Sid', '2', 'sgquin@gmail.com')
       const gottenName = obj2.getName()
-      const { name, id, email } = obj2
+      const { name } = obj2
 
       expect(gottenName).toEqual(name)
     })
