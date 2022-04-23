@@ -12,6 +12,7 @@ describe('Employee', () => {
      expect(obj.email).toEqual('sgquin@gmail.com')
     })
   })
+
   describe('getID', () => {
     it('should return employee id number', ()=>{
       const obj = new Employee('Sid', 'sgquin@gmail.com')
@@ -19,8 +20,8 @@ describe('Employee', () => {
 
       expect(gottenID).toEqual(obj.id)
     })
-    
   })
+
   describe('getRole', () => {
     it('should return Employee', ()=>{
       const obj2 = new Employee('Sid', 'sgquin@gmail.com')
@@ -28,7 +29,6 @@ describe('Employee', () => {
 
       expect(role).toEqual('Employee')
     })
-    
   })
-  
 })
+
