@@ -9,22 +9,22 @@ const empArray = []
 function managerPrompt(){
     inquirer.prompt([
         {
-            message: 'Please Enter Manager Name',
+            message: '\nWelcome to the Team Profile Generator\nPlease follow the onscreen prompts.\n\nTo begin, Please enter the team Manager\'s Name:',
             name: 'name'
         },
         {
-            message: 'Please Enter Manager email',
+            message: 'Please Enter Manager email:',
             name: 'email'
         },
         {
-            message: 'Please Enter Manager Office Number',
+            message: 'Please Enter Manager Office Number:',
             name: 'office'
         },
     ]).then(function(answer){
         let newMan = new Manager( answer.name, answer.email, answer.office )
         empArray.push(newMan)
         // generate.generateSection(newMan)
-        console.log("Manager Successfully Added!")
+        console.log(`\nManager Successfully Added!\nEmployeeID : ${newMan.getID()}\n`)
         addEmpMenu()
     })
 }
@@ -56,21 +56,21 @@ function addEmpMenu(){
 function engineerMenu() {
     inquirer.prompt([
         {
-            message: 'Please Enter Engineer Name',
+            message: 'Please Enter Engineer Name:',
             name: 'name'
         },
         {
-            message: 'Please Enter Engineer email',
+            message: 'Please Enter Engineer email:',
             name: 'email'
         },
         {
-            message: 'Please Enter Engineer gitHub username',
+            message: 'Please Enter Engineer gitHub username:',
             name: 'github'
         }
     ]).then((answers)=> {
         let newEng = new Engineer(answers.name, answers.email, answers.github)
         empArray.push(newEng)
-        console.log('Engineer Successfully Added!')
+        console.log(`\nEngineer Successfully Added!\nEmployeeID : ${newEng.getID()}\n`)
         addEmpMenu()
     })
 }
@@ -78,26 +78,26 @@ function engineerMenu() {
 function internMenu() {
     inquirer.prompt([
         {
-            message: 'Please Enter Intern Name',
+            message: 'Please Enter Intern Name:',
             name: 'name'
         },
         {
-            message: 'Please Enter Intern email',
+            message: 'Please Enter Intern email:',
             name: 'email'
         },
         {
-            message: 'Please Enter Intern school',
+            message: 'Please Enter Intern school:',
             name: 'school'
         }
     ]).then((answers)=> {
         let newInt = new Intern(answers.name, answers.email, answers.school)
         empArray.push(newInt)
-        console.log('Engineer Successfully Added!')
+        console.log(`\nEngineer Successfully Added!\nEmployeeID : ${newInt.getID()} \n`)
         addEmpMenu()
     })
 }
 
-
+// function writeToFile
 
 
 // first file to run on open 
