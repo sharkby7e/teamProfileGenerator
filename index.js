@@ -13,10 +13,6 @@ function managerPrompt(){
             name: 'name'
         },
         {
-            message: 'Please Enter Manager ID',
-            name: 'id'
-        },
-        {
             message: 'Please Enter Manager email',
             name: 'email'
         },
@@ -25,7 +21,7 @@ function managerPrompt(){
             name: 'office'
         },
     ]).then(function(answer){
-        let newMan = new Manager( answer.name, answer.id, answer.email, answer.office )
+        let newMan = new Manager( answer.name, answer.email, answer.office )
         empArray.push(newMan)
         // generate.generateSection(newMan)
         console.log("Manager Successfully Added!")
@@ -64,10 +60,6 @@ function engineerMenu() {
             name: 'name'
         },
         {
-            message: 'Please Enter Engineer ID',
-            name: 'id'
-        },
-        {
             message: 'Please Enter Engineer email',
             name: 'email'
         },
@@ -76,7 +68,7 @@ function engineerMenu() {
             name: 'github'
         }
     ]).then((answers)=> {
-        let newEng = new Engineer(answers.name, answers.id, answers.email, answers.github)
+        let newEng = new Engineer(answers.name, answers.email, answers.github)
         empArray.push(newEng)
         console.log('Engineer Successfully Added!')
         addEmpMenu()
@@ -90,10 +82,6 @@ function internMenu() {
             name: 'name'
         },
         {
-            message: 'Please Enter Intern ID',
-            name: 'id'
-        },
-        {
             message: 'Please Enter Intern email',
             name: 'email'
         },
@@ -102,7 +90,7 @@ function internMenu() {
             name: 'school'
         }
     ]).then((answers)=> {
-        let newInt = new Intern(answers.name, answers.id, answers.email, answers.school)
+        let newInt = new Intern(answers.name, answers.email, answers.school)
         empArray.push(newInt)
         console.log('Engineer Successfully Added!')
         addEmpMenu()
