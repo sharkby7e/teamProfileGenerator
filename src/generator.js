@@ -1,8 +1,25 @@
+const manCard = require('./manSection')
 
-function generateHTML(arr){
-  arr.forEach((obj) => {
-    console.log(obj.name)
+let cardSectionLit = ``
+
+function generateCards(arr){
+  arr.forEach(obj => {
+    let role = obj.getRole()
+    switch(role){
+      case 'Manager':
+        cardSectionLit += manCard.makeCard(obj)
+        break;
+    }
   })
 }
 
-module.exports = generateHTML()
+function generateHTML(){
+  return `
+  ${cardSectionLit}
+  `
+}
+
+module.exports = {
+  generateHTML,
+  generateCards
+}

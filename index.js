@@ -3,7 +3,7 @@ const fs = require('fs')
 const Manager = require('./lib/manager')
 const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
-// const generate = require('./src/generator')
+const generate = require('./src/generator')
 
 const empArray = []
 function managerPrompt(){
@@ -23,7 +23,8 @@ function managerPrompt(){
     ]).then(function(answer){
         let newMan = new Manager( answer.name, answer.email, answer.office )
         empArray.push(newMan)
-        // generate.generateSection(newMan)
+        generate.generateCards(empArray)
+        console.log(generate.generateHTML())
         console.log(`\nManager Successfully Added!\nEmployeeID : ${newMan.getID()}\n`)
         addEmpMenu()
     })
