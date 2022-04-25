@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "reset": "rm dist/index.html"
+    "reset": "rm dist/GENERATED.html"
   },
   "repository": {
     "type": "git",
