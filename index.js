@@ -46,11 +46,8 @@ function addEmpMenu(){
                 break;
             case 'I\'m done creating employees':
                 generate.generateCards(empArray)
-                // console.log(generate.generateHTML())
                 writeToFile(generate.generateHTML())
                 break;
-                // console.log(empArray)
-                // generate.generateHTML(empArray)
         }
     })
 }
@@ -113,3 +110,4 @@ function run(){
 }
 
 run()
+
