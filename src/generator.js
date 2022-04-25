@@ -35,7 +35,7 @@ function generateHTML(){
   </head>
   <body class = 'd-flex flex-column justify-content-center'>
 
-    <h1 class = "text-center text-light">Your Team Profile</h1>
+    <h1 class = "text-center text-align-middle text-light">Your Team Profile</h1>
 
     <main class = "d-flex flex-wrap justify-content-center align-self-center cardHolder">
     ${cardSectionLit}      

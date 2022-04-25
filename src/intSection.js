@@ -7,7 +7,7 @@ function makeCard(obj){
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${obj.getID()}</li>
-          <li class ="list-group-item"><a href="mailto:${obj.getEmail()}" class="card-link">Email</a></li>
+          <li class ="list-group-item">Email: <a href="mailto:${obj.getEmail()}" class="card-link">${obj.getEmail()}</a></li>
           <li class="list-group-item">School: ${obj.getSchool()}</li>
         </ul>
       </div>
