@@ -8,7 +8,7 @@ function makeCard(obj){
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${obj.getID()}</li>
           <li class ="list-group-item"><a href="mailto:${obj.getEmail()}" class="card-link">Email</a></li>
-          <li class="list-group-item">github/school/office</li>
+          <li class="list-group-item">Office: ${obj.getOffice()}</li>
         </ul>
       </div>
   `
