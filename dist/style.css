@@ -1,0 +1,16 @@
+h1 {
+  width: 100vw;
+  padding: 5rem;
+  background-color: darkslategray;
+}
+
+.cardHolder {
+  background-color: lightgray;
+  width: 90%;
+  height: 75%;
+  display: flex;
+}
+
+.card {
+  margin: 1rem;
+}
