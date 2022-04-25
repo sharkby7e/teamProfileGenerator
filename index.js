@@ -23,8 +23,6 @@ function managerPrompt(){
     ]).then(function(answer){
         let newMan = new Manager( answer.name, answer.email, answer.office )
         empArray.push(newMan)
-        generate.generateCards(empArray)
-        console.log(generate.generateHTML())
         console.log(`\nManager Successfully Added!\nEmployeeID : ${newMan.getID()}\n`)
         addEmpMenu()
     })
@@ -47,8 +45,11 @@ function addEmpMenu(){
                 internMenu();
                 break;
             case 'I\'m done creating employees':
-                console.log(empArray)
+                generate.generateCards(empArray)
+                // console.log(generate.generateHTML())
+                writeToFile(generate.generateHTML())
                 break;
+                // console.log(empArray)
                 // generate.generateHTML(empArray)
         }
     })
@@ -99,6 +100,11 @@ function internMenu() {
 }
 
 // function writeToFile
+function writeToFile(data) {
+  fs.writeFile("./dist/GENERATED.html", data, err =>{
+    err ? console.log(err) : console.log("Markdown Successfully Generated!")
+  })
+}
 
 
 // first file to run on open 

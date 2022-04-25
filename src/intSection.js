@@ -11,6 +11,7 @@ function makeCard(obj){
           <li class="list-group-item">School: ${obj.getSchool()}</li>
         </ul>
       </div>
+
   `
 }
 

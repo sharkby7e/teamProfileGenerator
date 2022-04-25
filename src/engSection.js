@@ -8,9 +8,10 @@ function makeCard(obj){
         <ul class="list-group list-group-flush">
           <li class="list-group-item">ID: ${obj.getID()}</li>
           <li class ="list-group-item"><a href="mailto:${obj.getEmail()}" class="card-link">Email</a></li>
-          <li class="list-group-item"><a href = "https://www.github.com/${obj.getGithub()}>Github: ${obj.getGithub()}</a></li>
+          <li class="list-group-item"><a href = "https://www.github.com/${obj.getGithub()}" class ='card-link'>Github: ${obj.getGithub()}</a></li>
         </ul>
       </div>
+
   `
 }
 
