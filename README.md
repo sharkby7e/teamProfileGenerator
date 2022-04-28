@@ -12,7 +12,6 @@ in browser, the user is shown a neat webpage populated with cards for all of the
    * [Usage](#usage)
    * [License](#license)
    * [Contributing](#contributing)
-   * [Testing](#testing)
    * [Contact/Questions](#questions)
    * [Summary](#summary-and-learning-points)
  
